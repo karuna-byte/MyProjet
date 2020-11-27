@@ -37,7 +37,7 @@ public class MyController
 	@GetMapping("/MyResponseEntity")
 	public ResponseEntity<String> getResponseEntity(@RequestParam String name)
 	{
-		if(name.equals(""))
+		if(name.equals(""))//if name is empty
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		
 		return new ResponseEntity<>(name, HttpStatus.OK);
